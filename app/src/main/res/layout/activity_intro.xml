@@ -42,37 +42,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/intro_activity_background" />
 
-    <TextView
-        android:id="@+id/intro_activity_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/intro_description"
-        android:textSize="30sp"
-        android:textColor="#3D33A8"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/intro_activity_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intro_activity_logo" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/intro_btn"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/intro_orange_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/intro_purple_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/intro_activity_background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intro_activity_background">
+        app:layout_constraintTop_toBottomOf="@+id/intro_activity_logo"
+        app:layout_constraintVertical_bias="0.493">
 
         <TextView
-            android:id="@+id/intro_activity_button_text"
+            android:id="@+id/intro_btn_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/intro_button"
-            android:textColor="#FFFFFF"
-            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

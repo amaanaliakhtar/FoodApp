@@ -3,4 +3,6 @@
     <string name="intro_activity_title">Foodator</string>
     <string name="intro_description">Food Delivery App</string>
     <string name="intro_button">Get Started</string>
+    <string name="greeting_msg">Hi David</string>
+    <string name="title_msg"><![CDATA[Order & Eat]]></string>
 </resources>
