@@ -3,6 +3,10 @@
     <string name="intro_activity_title">Foodator</string>
     <string name="intro_description">Food Delivery App</string>
     <string name="intro_button">Get Started</string>
-    <string name="greeting_msg">Hi David</string>
+    <string name="greeting_msg">Hi Richard</string>
     <string name="title_msg"><![CDATA[Order & Eat]]></string>
+    <string name="seach_placeholder_text">Find your food</string>
+    <string name="free_delivery">Free Delivery</string>
+    <string name="banner_subtext">May 2 - June 10</string>
+    <string name="order_now">Order Now</string>
 </resources>
