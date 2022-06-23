@@ -9,4 +9,10 @@
     <string name="free_delivery">Free Delivery</string>
     <string name="banner_subtext">May 2 - June 10</string>
     <string name="order_now">Order Now</string>
+    <string name="categories_title">Categories</string>
+    <string name="popular_heading">Popular</string>
+    <string name="home_btn_text">Home</string>
+    <string name="profile_btn_text">Profile</string>
+    <string name="support_btn_text">Support</string>
+    <string name="settings_btn_text">Settings</string>
 </resources>
