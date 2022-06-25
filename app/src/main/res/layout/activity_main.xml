@@ -168,9 +168,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
+                    android:id="@+id/category_recycler"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/categories_title">
@@ -188,7 +190,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+                    app:layout_constraintTop_toBottomOf="@+id/category_recycler" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
@@ -355,11 +357,13 @@
             android:elevation="3dp"
             android:src="@drawable/shopping_cart"
             app:backgroundTint="#FF5E00"
-            app:layout_anchor="@id/bottom_app_bar"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+            app:layout_anchor="@id/bottom_app_bar"
+            app:maxImageSize="30dp"
+            android:tint="#FFFFFF">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
