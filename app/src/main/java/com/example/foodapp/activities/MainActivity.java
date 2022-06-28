@@ -9,12 +9,14 @@ import android.os.Bundle;
 import com.example.foodapp.R;
 import com.example.foodapp.activities.category.Category;
 import com.example.foodapp.activities.category.CategoryAdapter;
+import com.example.foodapp.activities.food.FoodItem;
+import com.example.foodapp.activities.popular.PopularAdapter;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView.Adapter adapter;
-    private RecyclerView categoryRecycler;
+    private RecyclerView.Adapter categoryAdapter, popularAdapter;
+    private RecyclerView categoryRecycler, popularRecycler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,20 @@ public class MainActivity extends AppCompatActivity {
         categories.add(new Category("Drink", "cat_4"));
         categories.add(new Category("Donut", "cat_5"));
 
-        adapter = new CategoryAdapter(categories);
-        categoryRecycler.setAdapter(adapter);  //clip to padding attr on recycler view
+        categoryAdapter = new CategoryAdapter(categories);
+        categoryRecycler.setAdapter(categoryAdapter);  //clip to padding attr on recycler view
+    }
+
+    private void recyclerViewPoplar(){
+        LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        popularRecycler = findViewById(R.id.popular_recycler);
+
+        ArrayList<FoodItem> foodItems = new ArrayList<>();
+        foodItems.add(new FoodItem("Pepperoni pizza", "pizza1", "Fresh pizza made with cheese, tomato and pepperoni", 6.99));
+        foodItems.add(new FoodItem("Cheese Burger", "burger", "1/4 burger served with cheese and fresh salad", 3.50));
+        foodItems.add(new FoodItem("Vegetable Pizza", "pizza2", "Spicy pizza with onions, peppers, garlic and mushrooms", 5.99));
+
+        popularAdapter = new PopularAdapter(foodItems);
+        popularRecycler.setAdapter(popularAdapter);
     }
 }

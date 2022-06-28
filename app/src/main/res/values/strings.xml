@@ -15,4 +15,5 @@
     <string name="profile_btn_text">Profile</string>
     <string name="support_btn_text">Support</string>
     <string name="settings_btn_text">Settings</string>
+    <string name="add_button">+Add</string>
 </resources>
