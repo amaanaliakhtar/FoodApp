@@ -28,41 +28,18 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_view_holder, parent, false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.popular_view_holder, parent, false);
         return new ViewHolder(inflate);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.categoryTitle.setText(foodItems.get(position).getTitle());
-        String imageUrl = "cat_";
+        holder.foodItemName.setText(foodItems.get(position).getTitle());
+        holder.foodItemPrice.setText(String.valueOf(foodItems.get(position).getPrice()));
 
-        switch (position){
-            case 0:
-                imageUrl = "cat_1";
-                holder.categoryLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.category_background1));
-                break;
-            case 1:
-                imageUrl = "cat_2";
-                holder.categoryLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.category_background2));
-                break;
-            case 2:
-                imageUrl = "cat_3";
-                holder.categoryLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.category_background3));
-                break;
-            case 3:
-                imageUrl = "cat_4";
-                holder.categoryLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.category_background4));
-                break;
-            case 4:
-                imageUrl = "cat_5";
-                holder.categoryLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.category_background5));
-                break;
-            default:
-                break;
-        }
-        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(imageUrl, "drawable", holder.itemView.getContext().getPackageName());
-        Glide.with(holder.itemView.getContext()).load(drawableResourceId).into(holder.categoryImage);
+
+        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(foodItems.get(position).getImage(), "drawable", holder.itemView.getContext().getPackageName());
+        Glide.with(holder.itemView.getContext()).load(drawableResourceId).into(holder.foodItemImage);
     }
 
     @Override
@@ -71,15 +48,16 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView categoryTitle;
-        ImageView categoryImage;
-        ConstraintLayout categoryLayout;
+        TextView foodItemName, foodItemPrice, addBtn;
+        ImageView foodItemImage;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            categoryTitle = itemView.findViewById(R.id.category_text_view);
-            categoryImage = itemView.findViewById(R.id.category_image_view);
-            categoryLayout = itemView.findViewById(R.id.category_layout);
+            foodItemName = itemView.findViewById(R.id.food_item_title);
+            foodItemPrice = itemView.findViewById(R.id.food_item_price);
+            foodItemImage = itemView.findViewById(R.id.food_item_image);
+            addBtn = itemView.findViewById(R.id.add_btn);
         }
     }
 }

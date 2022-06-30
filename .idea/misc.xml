@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Amaan/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/cart_background.xml" value="0.3235" />
         <entry key="..\:/Users/Amaan/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/category_background.xml" value="0.3235" />
+        <entry key="..\:/Users/Amaan/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/category_background1.xml" value="0.3235" />
         <entry key="..\:/Users/Amaan/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/category_background2.xml" value="0.3235" />
         <entry key="..\:/Users/Amaan/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/category_background3.xml" value="0.3235" />
         <entry key="..\:/Users/Amaan/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/category_background4.xml" value="0.3235" />

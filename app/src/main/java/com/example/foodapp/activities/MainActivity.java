@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerViewCategory();
+        recyclerViewPoplar();
     }
 
     private void recyclerViewCategory(){
@@ -45,11 +46,12 @@ public class MainActivity extends AppCompatActivity {
     private void recyclerViewPoplar(){
         LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         popularRecycler = findViewById(R.id.popular_recycler);
+        popularRecycler.setLayoutManager(llm);
 
         ArrayList<FoodItem> foodItems = new ArrayList<>();
         foodItems.add(new FoodItem("Pepperoni pizza", "pizza1", "Fresh pizza made with cheese, tomato and pepperoni", 6.99));
-        foodItems.add(new FoodItem("Cheese Burger", "burger", "1/4 burger served with cheese and fresh salad", 3.50));
-        foodItems.add(new FoodItem("Vegetable Pizza", "pizza2", "Spicy pizza with onions, peppers, garlic and mushrooms", 5.99));
+        foodItems.add(new FoodItem("Cheese Burger", "burger", "1/4 burger served with cheese and fresh salad", 5.99));
+        foodItems.add(new FoodItem("Vegetable Pizza", "pizza2", "Spicy pizza with onions, peppers, garlic and mushrooms", 6.99));
 
         popularAdapter = new PopularAdapter(foodItems);
         popularRecycler.setAdapter(popularAdapter);
