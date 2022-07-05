@@ -1,6 +1,8 @@
 package com.example.foodapp.activities.food;
 
-public class FoodItem {
+import java.io.Serializable;
+
+public class FoodItem implements Serializable {
     private String title;
     private String image;
     private String description;

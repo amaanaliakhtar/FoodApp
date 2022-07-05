@@ -1,5 +1,7 @@
 package com.example.foodapp.activities.popular;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodapp.R;
+import com.example.foodapp.activities.DetailActivity;
 import com.example.foodapp.activities.category.Category;
 import com.example.foodapp.activities.food.FoodItem;
 
@@ -40,6 +43,15 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
         int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(foodItems.get(position).getImage(), "drawable", holder.itemView.getContext().getPackageName());
         Glide.with(holder.itemView.getContext()).load(drawableResourceId).into(holder.foodItemImage);
+
+        holder.addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.itemView.getContext(), DetailActivity.class);
+                intent.putExtra("foodItem", foodItems.get(position));
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
