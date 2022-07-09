@@ -16,4 +16,9 @@
     <string name="support_btn_text">Support</string>
     <string name="settings_btn_text">Settings</string>
     <string name="add_button">+Add</string>
+    <string name="cart_items_total_label">Sub Total:</string>
+    <string name="cart_total_cost">£0</string>
+    <string name="delivery_cost_txt">Delivery Charge:</string>
+    <string name="cart_tax_txt">Tax:</string>
+    <string name="cart_total_label">Total:</string>
 </resources>
